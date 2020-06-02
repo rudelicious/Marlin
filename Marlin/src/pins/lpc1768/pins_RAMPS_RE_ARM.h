@@ -204,7 +204,8 @@
   #define MOSFET_D_PIN                     -1
 #endif
 #ifndef RAMPS_D8_PIN
-  #define RAMPS_D8_PIN                     P2_07  // (8)
+    //@_ D8 pin changed to P1.17 on RE-ARM board; used w/Little Driver board to control heatbed temperature
+  #define RAMPS_D8_PIN   P1_17//P2_07 // (8)
 #endif
 #ifndef RAMPS_D9_PIN
   #define RAMPS_D9_PIN                     P2_04  // (9)
