@@ -535,7 +535,7 @@
 
 #if ENABLED(PIDTEMPBED)
   //#define MIN_BED_POWER 0
-  #define PID_BED_DEBUG // Sends debug data to the serial port.
+  // #define PID_BED_DEBUG // Sends debug data to the serial port.
 
   //@_ Bed Autotune:
   // M303 E-1 C5 S60
@@ -545,9 +545,9 @@
   // #define DEFAULT_bedKi 0.63
   // #define DEFAULT_bedKd 482.67 
   //_20191124 
-  #define DEFAULT_bedKp 17.21 
-  #define DEFAULT_bedKi 0.39
-  #define DEFAULT_bedKd 512.16
+  // #define DEFAULT_bedKp 17.21 
+  // #define DEFAULT_bedKi 0.39
+  // #define DEFAULT_bedKd 512.16
   //_20200328
   #define DEFAULT_bedKp 16.47
   #define DEFAULT_bedKi 0.39
