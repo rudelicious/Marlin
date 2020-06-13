@@ -71,7 +71,7 @@
 // @section info
 
 // Author info of this build printed to the host during boot and M115
-#define STRING_CONFIG_H_AUTHOR "rudelicious" // Who made the changes.
+#define STRING_CONFIG_H_AUTHOR "Wasn't me..." // Who made the changes.
 //#define CUSTOM_VERSION_FILE Version.h // Path from the root directory (no quotes)
 
 /**
@@ -110,7 +110,7 @@
  * Select a secondary serial port on the board to use for communication with the host.
  * :[-1, 0, 1, 2, 3, 4, 5, 6, 7]
  */
-#define SERIAL_PORT_2 0  //@_ Enable UART port on Re-Arm 
+#define SERIAL_PORT_2 0  //@_ 0=Enable UART port on Re-Arm 
 
 
 /**
@@ -485,7 +485,7 @@
   // If you are using a pre-configured hotend then you can use one of the value sets by uncommenting it
 
   //@ _PID Autotune: 
-  // M303 E0 S220
+  // M303 E0 S220 U1
 
   //_20181219
   // #define DEFAULT_Kp 17.71  
@@ -538,7 +538,7 @@
   // #define PID_BED_DEBUG // Sends debug data to the serial port.
 
   //@_ Bed Autotune:
-  // M303 E-1 C5 S60
+  // M303 E-1 C5 S60 U1
 
   //_//20181218
   // #define DEFAULT_bedKp 34.94 
@@ -660,7 +660,7 @@
   #define DELTA_DIAGONAL_ROD 215.0        // (mm)
 
   // Distance between bed and nozzle Z home position
-  #define DELTA_HEIGHT 255.90//_20200328 250.00             // (mm) Get this value from G33 auto calibrate
+  #define DELTA_HEIGHT 255.40//255.90//_20200328 250.00             // (mm) Get this value from G33 auto calibrate
 
   #define DELTA_ENDSTOP_ADJ { 0.0, 0.0, 0.0 } // Get these values from G33 auto calibrate
 
@@ -787,7 +787,7 @@
  * following movement settings. If fewer factors are given than the
  * total number of extruders, the last value applies to the rest.
  */
-//#define DISTINCT_E_FACTORS
+#define DISTINCT_E_FACTORS
 
 /**
  * Default Axis Steps Per Unit (steps/mm)
@@ -802,7 +802,7 @@
 
 // delta speeds must be the same on xyz
 #define DEFAULT_XYZ_STEPS_PER_UNIT ((XYZ_FULL_STEPS_PER_ROTATION) * (XYZ_MICROSTEPS) / double(XYZ_BELT_PITCH) / double(XYZ_PULLEY_TEETH))
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { DEFAULT_XYZ_STEPS_PER_UNIT, DEFAULT_XYZ_STEPS_PER_UNIT, DEFAULT_XYZ_STEPS_PER_UNIT, 760*1.1 }  // default steps per unit for Kossel (GT2, 20 tooth)
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { DEFAULT_XYZ_STEPS_PER_UNIT, DEFAULT_XYZ_STEPS_PER_UNIT, DEFAULT_XYZ_STEPS_PER_UNIT, 491.76 }//450.0 }//760*1.1 }  //_See: "calibrating extruder steps"
 
 /**
  * Default Max Feed Rate (mm/s)
@@ -884,7 +884,7 @@
  *
  * See https://github.com/synthetos/TinyG/wiki/Jerk-Controlled-Motion-Explained
  */
-//#define S_CURVE_ACCELERATION
+// #define S_CURVE_ACCELERATION
 
 //===========================================================================
 //============================= Z Probe Options =============================
@@ -939,7 +939,7 @@
  * A Fix-Mounted Probe either doesn't deploy or needs manual deployment.
  *   (e.g., an inductive probe or a nozzle-based probe-switch.)
  */
-//#define FIX_MOUNTED_PROBE
+#define FIX_MOUNTED_PROBE
 
 /**
  * Use the nozzle as the probe, as with a conductive
@@ -1008,7 +1008,7 @@
  * Allen key retractable z-probe as seen on many Kossel delta printers - http://reprap.org/wiki/Kossel#Automatic_bed_leveling_probe
  * Deploys by touching z-axis belt. Retracts by pushing the probe down. Uses Z_MIN_PIN.
  */
-#define Z_PROBE_ALLEN_KEY
+// #define Z_PROBE_ALLEN_KEY
 
 #if ENABLED(Z_PROBE_ALLEN_KEY)
   // 2 or 3 sets of coordinates for deploying and retracting the spring loaded touch probe on G29,
@@ -1059,7 +1059,7 @@
  *
  * Specify a Probe position as { X, Y, Z }
  */
-#define NOZZLE_TO_PROBE_OFFSET { 0, -10, -3.5 }
+#define NOZZLE_TO_PROBE_OFFSET { 0, -17, -3.0 } //
 
 // Most probes should stay away from the edges of the bed, but
 // with NOZZLE_AS_PROBE this can be negative for a wider probing area.
@@ -1188,7 +1188,7 @@
 
 // Direction of endstops when homing; 1=MAX, -1=MIN
 // :[-1,1]
-#define X_HOME_DIR 1  // deltas always home to max
+#define X_HOME_DIR 1  // deltas always home to 1=MAX
 #define Y_HOME_DIR 1
 #define Z_HOME_DIR 1
 
@@ -1307,7 +1307,7 @@
  */
 //#define AUTO_BED_LEVELING_3POINT
 //#define AUTO_BED_LEVELING_LINEAR
-//#define AUTO_BED_LEVELING_BILINEAR //@_ 
+#define AUTO_BED_LEVELING_BILINEAR //@_ 
 //#define AUTO_BED_LEVELING_UBL
 //#define MESH_BED_LEVELING
 
