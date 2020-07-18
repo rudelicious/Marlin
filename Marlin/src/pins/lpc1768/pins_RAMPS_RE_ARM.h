@@ -352,7 +352,7 @@
   #define BTN_EN2                          P3_25  // (33) J3-4 & AUX-4
 
   #define SD_DETECT_PIN                    P1_31  // (49) J3-1 & AUX-3 (NOT 5V tolerant)
-  #define KILL_PIN                         P1_22  // (41) J5-4 & AUX-4
+  #define KILL_PIN                         P1_23  //P1_22  // (41) J5-4 & AUX-4
   #define LCD_PINS_RS                      P0_16  // (16) J3-7 & AUX-4
   #define LCD_SDSS                         P0_16  // (16) J3-7 & AUX-4
 
@@ -414,7 +414,7 @@
       #if ENABLED(MKS_12864OLED_SSD1306)
         #define LCD_PINS_DC                  P0_17
         #define DOGLCD_CS                    P0_16
-        #define DOGLCD_A0              LCD_PINS_DC
+        #define DOGLCD_A0                    LCD_PINS_DC
         #define DOGLCD_SCK                   P0_15
         #define DOGLCD_MOSI                  P0_18
       #endif
@@ -426,9 +426,9 @@
     #define LCD_PINS_ENABLE                P0_18  // (51) (MOSI) J3-10 & AUX-3
     #define LCD_PINS_D4                    P0_15  // (52) (SCK)  J3-9 & AUX-3
     #if ENABLED(ULTIPANEL)
-      #define LCD_PINS_D5                  P1_17  // (71) ENET_MDIO
-      #define LCD_PINS_D6                  P1_14  // (73) ENET_RX_ER
-      #define LCD_PINS_D7                  P1_10  // (75) ENET_RXD1
+      // #define LCD_PINS_D5                  P1_17  // (71) ENET_MDIO
+      // #define LCD_PINS_D6                  P1_14  // (73) ENET_RX_ER
+      // #define LCD_PINS_D7                  P1_10  // (75) ENET_RXD1
     #endif
   #endif
 
