@@ -2180,8 +2180,7 @@
 // Tiny, but very sharp OLED display
 //
 //#define MKS_12864OLED          // Uses the SH1106 controller (default)
-#define MKS_12864OLED_SSD1306  // Uses the SSD1306 controller
-
+#define MKS_12864OLED_SSD1306  // Uses the SSD1306 controller (See also: pins_RAMPS_RE_ARM.h)
 //
 // Einstart S OLED SSD1306
 //
