@@ -185,4 +185,5 @@ cmake-build-*
 #Python
 __pycache__
 
+#User
 extra/

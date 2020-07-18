@@ -335,10 +335,10 @@
 
 #elif HAS_SPI_LCD
 
-  //#define SCK_PIN                        P0_15  // (52)  system defined J3-9 & AUX-3
-  //#define MISO_PIN                       P0_17  // (50)  system defined J3-10 & AUX-3
-  //#define MOSI_PIN                       P0_18  // (51)  system defined J3-10 & AUX-3
-  //#define SS_PIN                         P1_23  // (53)  system defined J3-5 & AUX-3 (Sometimes called SDSS)
+  // #define SCK_PIN                        P0_15  // (52)  system defined J3-9 & AUX-3
+  // #define MISO_PIN                       P0_17  // (50)  system defined J3-10 & AUX-3
+  // #define MOSI_PIN                       P0_18  // (51)  system defined J3-10 & AUX-3
+  // #define SS_PIN                         P1_23  // (53)  system defined J3-5 & AUX-3 (Sometimes called SDSS)
 
   #if ENABLED(FYSETC_MINI_12864)
     #define BEEPER_PIN                     P1_01
@@ -407,8 +407,21 @@
         #define NEOPIXEL_PIN               P1_00
       #endif
     #else
-      #define DOGLCD_CS                    P0_26  // (63) J5-3 & AUX-2
-      #define DOGLCD_A0                    P2_06  // (59) J3-8 & AUX-2
+      // #define DOGLCD_CS                    P0_26  // (63) J5-3 & AUX-2
+      // #define DOGLCD_A0                    P2_06  // (59) J3-8 & AUX-2
+
+    //_@ #if ENABLED(MKS_12864OLED_SSD1306)
+      #define LCD_PINS_DC                  P0_17
+      #define DOGLCD_CS                    P0_16
+      #define DOGLCD_A0              LCD_PINS_DC
+      // #define DOGLCD_SCK                   P0_15
+      // #define DOGLCD_MOSI                  P0_18
+
+      // #define LCD_PINS_RS                  P1_00
+      // #define LCD_PINS_D7                  P1_22
+      // #define KILL_PIN                     -1     // NC
+    //_@ 
+
     #endif
 
     #define LCD_BACKLIGHT_PIN              P0_16  //(16) J3-7 & AUX-4 - only used on DOGLCD controllers

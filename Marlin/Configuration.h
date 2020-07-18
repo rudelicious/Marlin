@@ -2157,16 +2157,16 @@
 //
 // SSD1306 OLED full graphics generic display
 //
-#define U8GLIB_SSD1306
+// #define U8GLIB_SSD1306
 
 //
 // SAV OLEd LCD module support using either SSD1306 or SH1106 based LCD modules
 //
 //#define SAV_3DGLCD
-#if ENABLED(SAV_3DGLCD)
-  #define U8GLIB_SSD1306
+// #if ENABLED(SAV_3DGLCD)
+  // #define U8GLIB_SSD1306
   //#define U8GLIB_SH1106
-#endif
+// #endif
 
 //
 // TinyBoy2 128x64 OLED / Encoder Panel
@@ -2180,7 +2180,7 @@
 // Tiny, but very sharp OLED display
 //
 //#define MKS_12864OLED          // Uses the SH1106 controller (default)
-//#define MKS_12864OLED_SSD1306  // Uses the SSD1306 controller
+#define MKS_12864OLED_SSD1306  // Uses the SSD1306 controller
 
 //
 // Einstart S OLED SSD1306

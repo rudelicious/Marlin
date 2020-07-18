@@ -3316,7 +3316,7 @@
  * Add support for a low-cost 8x8 LED Matrix based on the Max7219 chip as a realtime status display.
  * Requires 3 signal wires. Some useful debug options are included to demonstrate its usage.
  */
-#define MAX7219_DEBUG
+// #define MAX7219_DEBUG
 #if ENABLED(MAX7219_DEBUG)
 #define MAX7219_CLK_PIN   P0_15 //(J3) P1_22 //64  // 77 on Re-ARM //_SCK/CLK, yellow wire
 #define MAX7219_DIN_PIN   P0_18 //(J3) P1_30 //57  // 78 on Re-ARM //_MOSI/DIN, orange wire
