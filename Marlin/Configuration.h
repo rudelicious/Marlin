@@ -490,7 +490,7 @@
 
   // If you are using a pre-configured hotend then you can use one of the value sets by uncommenting it
 
-  //@ _PID Autotune: 
+  //@ _PID Autotune and apply values: 
   // M303 E0 S220 U1
 
   //_20181219
@@ -543,7 +543,7 @@
   //#define MIN_BED_POWER 0
   // #define PID_BED_DEBUG // Sends debug data to the serial port.
 
-  //@_ Bed Autotune:
+  //@_ Bed Autotune and apply values:
   // M303 E-1 C5 S60 U1
 
   //_//20181218
@@ -555,10 +555,13 @@
   // #define DEFAULT_bedKi 0.39
   // #define DEFAULT_bedKd 512.16
   //_20200328
-  #define DEFAULT_bedKp 16.47
-  #define DEFAULT_bedKi 0.39
-  #define DEFAULT_bedKd 461.95
-
+  // #define DEFAULT_bedKp 16.47
+  // #define DEFAULT_bedKi 0.39
+  // #define DEFAULT_bedKd 461.95
+  //_20200722
+  #define DEFAULT_bedKp 14.62
+  #define DEFAULT_bedKi 0.32
+  #define DEFAULT_bedKd 440.61
   //@_ Set PIDs:
   // M304 P16.47 I0.39  D461.95
 
@@ -2365,18 +2368,18 @@
 // Support for Adafruit Neopixel LED driver
 #define NEOPIXEL_LED 
 #if ENABLED(NEOPIXEL_LED)
-  #define NEOPIXEL_TYPE   NEO_GRB // NEO_GRBW / NEO_GRB - four/three channel driver type (defined in Adafruit_NeoPixel.h)
-  #define NEOPIXEL_PIN     P2_06  //P1_22       // LED driving pin
+  #define NEOPIXEL_TYPE   NEO_GRBW // NEO_GRBW / NEO_GRB - four/three channel driver type (defined in Adafruit_NeoPixel.h)
+  #define NEOPIXEL_PIN    P1_22       // LED driving pin
   //#define NEOPIXEL2_TYPE NEOPIXEL_TYPE
   //#define NEOPIXEL2_PIN    5
   #define NEOPIXEL_PIXELS  1      // Number of LEDs in the strip, larger of 2 strips if 2 neopixel strips are used
   // #define NEOPIXEL_IS_SEQUENTIAL   // Sequential display for temperature change - LED by LED. Disable to change all LEDs at once.
-  #define NEOPIXEL_BRIGHTNESS 63  // Initial brightness (0-255)
+  #define NEOPIXEL_BRIGHTNESS 192  // Initial brightness (0-255)
   #define NEOPIXEL_STARTUP_TEST  // Cycle through colors at startup
 
   // Use a single Neopixel LED for static (background) lighting
-  #define NEOPIXEL_BKGD_LED_INDEX  0               // Index of the LED to use
-  #define NEOPIXEL_BKGD_COLOR { 63, 0, 0, 0 } // R, G, B, W
+  // #define NEOPIXEL_BKGD_LED_INDEX  0               // Index of the LED to use
+  // #define NEOPIXEL_BKGD_COLOR { 63, 0, 0, 0 } // R, G, B, W
 #endif
 
 /**
@@ -2406,7 +2409,7 @@
  * Set this manually if there are extra servos needing manual control.
  * Leave undefined or set to 0 to entirely disable the servo subsystem.
  */
-//#define NUM_SERVOS 3 // Servo index starts with 0 for M280 command
+#define NUM_SERVOS 1 // Servo index starts with 0 for M280 command
 
 // (ms) Delay  before the next move will start, to give the servo time to reach its target angle.
 // 300ms is a good value but you can try less delay.
@@ -2414,7 +2417,7 @@
 #define SERVO_DELAY { 300 }
 
 // Only power servos during movement, otherwise leave off to prevent jitter
-//#define DEACTIVATE_SERVOS_AFTER_MOVE
+// #define DEACTIVATE_SERVOS_AFTER_MOVE
 
 // Allow servo angle to be edited and saved to EEPROM
-//#define EDITABLE_SERVO_ANGLES
+#define EDITABLE_SERVO_ANGLES
