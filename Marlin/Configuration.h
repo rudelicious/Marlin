@@ -825,9 +825,9 @@
  */
 #define DEFAULT_MAX_FEEDRATE          { 500, 500, 500, 25 }
 
-//#define LIMITED_MAX_FR_EDITING        // Limit edit via M203 or LCD to DEFAULT_MAX_FEEDRATE * 2
+#define LIMITED_MAX_FR_EDITING        // Limit edit via M203 or LCD to DEFAULT_MAX_FEEDRATE * 2
 #if ENABLED(LIMITED_MAX_FR_EDITING)
-  #define MAX_FEEDRATE_EDIT_VALUES    { 600, 600, 10, 50 } // ...or, set your own edit limits
+  #define MAX_FEEDRATE_EDIT_VALUES    { 600, 600, 600, 50 } // ...or, set your own edit limits
 #endif
 
 /**
@@ -836,11 +836,11 @@
  * Override with M201
  *                                      X, Y, Z, E0 [, E1[, E2...]]
  */
-#define DEFAULT_MAX_ACCELERATION      { 9000, 9000, 9000, 10000 }
+#define DEFAULT_MAX_ACCELERATION      { 6000, 6000, 6000, 10000 }
 
-//#define LIMITED_MAX_ACCEL_EDITING     // Limit edit via M201 or LCD to DEFAULT_MAX_ACCELERATION * 2
+#define LIMITED_MAX_ACCEL_EDITING     // Limit edit via M201 or LCD to DEFAULT_MAX_ACCELERATION * 2
 #if ENABLED(LIMITED_MAX_ACCEL_EDITING)
-  #define MAX_ACCEL_EDIT_VALUES       { 6000, 6000, 200, 20000 } // ...or, set your own edit limits
+  #define MAX_ACCEL_EDIT_VALUES       { 9000, 9000, 9000, 10000 } // ...or, set your own edit limits
 #endif
 
 /**
@@ -865,15 +865,15 @@
  */
 #define CLASSIC_JERK
 #if ENABLED(CLASSIC_JERK)
-  #define DEFAULT_XJERK 10.0
+  #define DEFAULT_XJERK 8.0//10.0
   #define DEFAULT_YJERK DEFAULT_XJERK
   #define DEFAULT_ZJERK DEFAULT_XJERK // Must be same as XY for delta
 
   //#define TRAVEL_EXTRA_XYJERK 0.0     // Additional jerk allowance for all travel moves
 
-  //#define LIMITED_JERK_EDITING        // Limit edit via M205 or LCD to DEFAULT_aJERK * 2
+  #define LIMITED_JERK_EDITING        // Limit edit via M205 or LCD to DEFAULT_aJERK * 2
   #if ENABLED(LIMITED_JERK_EDITING)
-    #define MAX_JERK_EDIT_VALUES { 20, 20, 0.6, 10 } // ...or, set your own edit limits
+    #define MAX_JERK_EDIT_VALUES { 20, 20, 20, 10 } // ...or, set your own edit limits
   #endif
 #endif
 
@@ -2180,6 +2180,7 @@
 // Tiny, but very sharp OLED display
 //
 //#define MKS_12864OLED          // Uses the SH1106 controller (default)
+
 #define MKS_12864OLED_SSD1306  // Uses the SSD1306 controller (See also: pins_RAMPS_RE_ARM.h)
 //
 // Einstart S OLED SSD1306
@@ -2362,14 +2363,14 @@
 #endif
 
 // Support for Adafruit Neopixel LED driver
-// #define NEOPIXEL_LED 
+#define NEOPIXEL_LED 
 #if ENABLED(NEOPIXEL_LED)
   #define NEOPIXEL_TYPE   NEO_GRB // NEO_GRBW / NEO_GRB - four/three channel driver type (defined in Adafruit_NeoPixel.h)
-  #define NEOPIXEL_PIN     P1_22//4       // LED driving pin
+  #define NEOPIXEL_PIN     P2_06  //P1_22       // LED driving pin
   //#define NEOPIXEL2_TYPE NEOPIXEL_TYPE
   //#define NEOPIXEL2_PIN    5
-  #define NEOPIXEL_PIXELS 12       // Number of LEDs in the strip, larger of 2 strips if 2 neopixel strips are used
-  #define NEOPIXEL_IS_SEQUENTIAL   // Sequential display for temperature change - LED by LED. Disable to change all LEDs at once.
+  #define NEOPIXEL_PIXELS  1      // Number of LEDs in the strip, larger of 2 strips if 2 neopixel strips are used
+  // #define NEOPIXEL_IS_SEQUENTIAL   // Sequential display for temperature change - LED by LED. Disable to change all LEDs at once.
   #define NEOPIXEL_BRIGHTNESS 63  // Initial brightness (0-255)
   #define NEOPIXEL_STARTUP_TEST  // Cycle through colors at startup
 
