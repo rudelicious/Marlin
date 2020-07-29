@@ -559,9 +559,15 @@
   // #define DEFAULT_bedKi 0.39
   // #define DEFAULT_bedKd 461.95
   //_20200722
-  #define DEFAULT_bedKp 14.62
-  #define DEFAULT_bedKi 0.32
-  #define DEFAULT_bedKd 440.61
+  // #define DEFAULT_bedKp 14.62
+  // #define DEFAULT_bedKi 0.32
+  // #define DEFAULT_bedKd 440.61
+
+   //_20200729
+   #define DEFAULT_bedKp 18.71 
+   #define DEFAULT_bedKi 0.49 
+   #define DEFAULT_bedKd 478.69
+
   //@_ Set PIDs:
   // M304 P16.47 I0.39  D461.95
 
@@ -871,7 +877,7 @@
  */
 #define CLASSIC_JERK
 #if ENABLED(CLASSIC_JERK)
-  #define DEFAULT_XJERK 8.0//10.0
+  #define DEFAULT_XJERK 10.0
   #define DEFAULT_YJERK DEFAULT_XJERK
   #define DEFAULT_ZJERK DEFAULT_XJERK // Must be same as XY for delta
 
@@ -957,14 +963,14 @@
  * Use G29 repeatedly, adjusting the Z height at each point with movement commands
  * or (with LCD_BED_LEVELING) the LCD controller.
  */
-//#define PROBE_MANUALLY
+#define PROBE_MANUALLY
 //#define MANUAL_PROBE_START_Z 0.2
 
 /**
  * A Fix-Mounted Probe either doesn't deploy or needs manual deployment.
  *   (e.g., an inductive probe or a nozzle-based probe-switch.)
  */
-#define FIX_MOUNTED_PROBE
+// #define FIX_MOUNTED_PROBE
 
 /**
  * Use the nozzle as the probe, as with a conductive
@@ -1142,7 +1148,7 @@
 #define Z_PROBE_OFFSET_RANGE_MAX 20
 
 // Enable the M48 repeatability test to test probe accuracy
-#define Z_MIN_PROBE_REPEATABILITY_TEST
+// #define Z_MIN_PROBE_REPEATABILITY_TEST  //_ Comment when using PROBE_MANUALLY
 
 // Before deploy/stow pause for user confirmation
 //#define PAUSE_BEFORE_DEPLOY_STOW
