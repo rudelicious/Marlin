@@ -493,15 +493,15 @@
   //@ _PID Autotune and apply values: 
   // M303 E0 S220 U1
 
-  //_20181219
-  // #define DEFAULT_Kp 17.71  
-  // #define DEFAULT_Ki 1.03
-  // #define DEFAULT_Kd 75.87
   //_20191124
-  #define DEFAULT_Kp 43.42  
-  #define DEFAULT_Ki 4.15
-  #define DEFAULT_Kd 113.56
-  
+  // #define DEFAULT_Kp 43.42  
+  // #define DEFAULT_Ki 4.15
+  // #define DEFAULT_Kd 113.56
+  //_20200821
+  #define DEFAULT_Kp 45.23  
+  #define DEFAULT_Ki 4.02
+  #define DEFAULT_Kd 127.10  
+
   //@_ Set hotend PIDs: 
   // M301 P43.42 I4.15  D113.56 
   
@@ -546,27 +546,18 @@
   //@_ Bed Autotune and apply values:
   // M303 E-1 C5 S60 U1
 
-  //_//20181218
-  // #define DEFAULT_bedKp 34.94 
-  // #define DEFAULT_bedKi 0.63
-  // #define DEFAULT_bedKd 482.67 
-  //_20191124 
-  // #define DEFAULT_bedKp 17.21 
-  // #define DEFAULT_bedKi 0.39
-  // #define DEFAULT_bedKd 512.16
-  //_20200328
-  // #define DEFAULT_bedKp 16.47
-  // #define DEFAULT_bedKi 0.39
-  // #define DEFAULT_bedKd 461.95
   //_20200722
   // #define DEFAULT_bedKp 14.62
   // #define DEFAULT_bedKi 0.32
   // #define DEFAULT_bedKd 440.61
-
    //_20200729
-   #define DEFAULT_bedKp 18.71 
-   #define DEFAULT_bedKi 0.49 
-   #define DEFAULT_bedKd 478.69
+  //  #define DEFAULT_bedKp 18.71 
+  //  #define DEFAULT_bedKi 0.49 
+  //  #define DEFAULT_bedKd 478.69
+  //_20200821
+   #define DEFAULT_bedKp 15.63 
+   #define DEFAULT_bedKi 0.37 
+   #define DEFAULT_bedKd 444.77
 
   //@_ Set PIDs:
   // M304 P16.47 I0.39  D461.95
@@ -683,7 +674,7 @@
   #define DELTA_DIAGONAL_ROD 215.0        // (mm)
 
   // Distance between bed and nozzle Z home position
-  #define DELTA_HEIGHT 260.60 //257.30//256.95//257.52 //255.43//255.90//_20200328 250.00             // (mm) Get this value from G33 auto calibrate
+  #define DELTA_HEIGHT 260.65              // (mm) Get this value from G33 auto calibrate
 
   #define DELTA_ENDSTOP_ADJ { 0.0, 0.0, 0.0 } // Get these values from G33 auto calibrate
 
@@ -1345,13 +1336,13 @@
 //#define AUTO_BED_LEVELING_LINEAR
 #define AUTO_BED_LEVELING_BILINEAR //@_ 
 //#define AUTO_BED_LEVELING_UBL
-//#define MESH_BED_LEVELING //_ Uncomment when using PROBE_MANUALLY
+// #define MESH_BED_LEVELING //_ Uncomment when using PROBE_MANUALLY; not compatible w/delta's
 
 /**
  * Normally G28 leaves leveling disabled on completion. Enable
  * this option to have G28 restore the prior leveling state.
  */
-//#define RESTORE_LEVELING_AFTER_G28
+#define RESTORE_LEVELING_AFTER_G28
 
 /**
  * Enable detailed logging of G28, G29, M48, etc.
