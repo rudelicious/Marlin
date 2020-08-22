@@ -954,14 +954,14 @@
  * Use G29 repeatedly, adjusting the Z height at each point with movement commands
  * or (with LCD_BED_LEVELING) the LCD controller.
  */
-// #define PROBE_MANUALLY
+#define PROBE_MANUALLY
 //#define MANUAL_PROBE_START_Z 0.2
 
 /**
  * A Fix-Mounted Probe either doesn't deploy or needs manual deployment.
  *   (e.g., an inductive probe or a nozzle-based probe-switch.)
  */
-#define FIX_MOUNTED_PROBE
+// #define FIX_MOUNTED_PROBE
 
 /**
  * Use the nozzle as the probe, as with a conductive
@@ -1086,8 +1086,8 @@
  *
  * Specify a Probe position as { X, Y, Z }
  */
-// #define NOZZLE_TO_PROBE_OFFSET {0, 0, 0} //_ Set to {0, 0, 0} if using PROBE_MANUALLY
-#define NOZZLE_TO_PROBE_OFFSET { 0, -17, -3.0 } //_ Uncomment and set when using an actual probe (FIX_MOUNTED_PROBE)
+#define NOZZLE_TO_PROBE_OFFSET {0, 0, 0} //_ Set to {0, 0, 0} if using PROBE_MANUALLY
+// #define NOZZLE_TO_PROBE_OFFSET { 0, -17, -3.0 } //_ Uncomment and set when using an actual probe (FIX_MOUNTED_PROBE)
 
 // Most probes should stay away from the edges of the bed, but
 // with NOZZLE_AS_PROBE this can be negative for a wider probing area.
