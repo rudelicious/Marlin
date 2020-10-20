@@ -3,11 +3,19 @@
 # Lock closed issues after a period of inactivity
 #
 
+<<<<<<< HEAD
+name: 'Lock threads'
+
+on:
+  schedule:
+    - cron: '22 0 * * *'
+=======
 name: Lock Closed Issues
 
 on:
   schedule:
     - cron: '0 1/13 * * *'
+>>>>>>> 5513e67512481024e0d571d84487f7c636996803
 
 jobs:
   lock:
