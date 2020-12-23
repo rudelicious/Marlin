@@ -421,6 +421,10 @@
   #define NEOPIXEL_PIN                     P1_24
 #endif
 
+//_ Laser (see also Configuration.h, Configuration_adv.h, pins_BTT_SKR_V1_4.h, pins_BTT_SKR_common.h)
+#define SPINDLE_LASER_ENA_PIN   P2_04 //_ HE1 on SKR 1.4 
+#define SPINDLE_LASER_PWM_PIN   P2_03 //_ FAN0 on SKR 1.4
+
 /**
  * Special pins
  *   P1_30  (37) (NOT 5V tolerant)
