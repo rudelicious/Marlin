@@ -37,15 +37,17 @@
 // Release PA13/PA14 (led, usb control) from SWD pins
 #define DISABLE_DEBUG
 
-#define NEOPIXEL_PIN                       -1 //PA8   // LED driving pin
+#define NEOPIXEL_PIN                       -1 //PA8   //_ Use PA8 as FAN_PIN for Laser PWM control (see also: pins_BTT_SKR_MINI_E3_common.h)
 
-#define PS_ON_PIN                          PC13  // Power Supply Control
+#define PS_ON_PIN                          PC13  
 
 #define FAN1_PIN                           PC7
 
 #ifndef CONTROLLER_FAN_PIN
-  #define CONTROLLER_FAN_PIN               FAN1_PIN
+  #define CONTROLLER_FAN_PIN               -1//FAN1_PIN   
 #endif
+
+#define COOLANT_FLOOD_PIN                  FAN1_PIN//-1   //_ Use FAN1_PIN for Air Assist 
 
 /**
  * TMC220x stepper drivers

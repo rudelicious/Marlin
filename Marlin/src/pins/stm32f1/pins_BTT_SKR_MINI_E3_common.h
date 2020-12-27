@@ -94,7 +94,7 @@
 #define HEATER_BED_PIN                      PC9   // "HB"
 
 #ifdef SKR_MINI_E3_V2
-  #define FAN_PIN                           PA8 //PC6
+  #define FAN_PIN                           PA8 //PC6   //_ Use PA8 as FAN_PIN for Laser PWM control (see also: pins_BTT_SKR_MINI_E3_V2_0.h)
 #else
   #define FAN_PIN                           PA8   // "FAN0"
 #endif
