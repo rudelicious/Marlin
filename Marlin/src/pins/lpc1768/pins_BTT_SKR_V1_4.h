@@ -44,11 +44,13 @@
 //
 // TMC StallGuard DIAG pins
 //
-#define X_DIAG_PIN                         P1_29  // X-STOP
-#define Y_DIAG_PIN                         P1_28  // Y-STOP
-#define Z_DIAG_PIN                         P1_27  // Z-STOP
-#define E0_DIAG_PIN                        P1_26  // E0DET
-#define E1_DIAG_PIN                        P1_25  // E1DET
+//_ Reassign DIAG pins to EXP2 (enable switching between StallGuard/physical endstops w/o driver modification)
+#define X_DIAG_PIN                         P0_16//P1_29  // X-STOP
+#define Y_DIAG_PIN                         P3_25//P1_28  // Y-STOP
+#define Z_DIAG_PIN                         P3_26//P1_27  // Z-STOP
+#define E0_DIAG_PIN                        P0_17//P1_26  // E0DET
+#define E1_DIAG_PIN                        P0_15//P1_25  // E1DET
+
 
 //
 // Limit Switches
@@ -56,9 +58,9 @@
 #ifdef X_STALL_SENSITIVITY
   #define X_STOP_PIN                  X_DIAG_PIN
   #if X_HOME_DIR < 0
-    #define X_MAX_PIN                      P1_26  // E0DET
+    #define X_MAX_PIN                      P0_17//P1_26  // E0DET
   #else
-    #define X_MIN_PIN                      P1_26  // E0DET
+    #define X_MIN_PIN                      P0_17//P1_26  // E0DET
   #endif
 #else
   #define X_STOP_PIN                       P1_29  // X-STOP
@@ -67,9 +69,9 @@
 #ifdef Y_STALL_SENSITIVITY
   #define Y_STOP_PIN                  Y_DIAG_PIN
   #if Y_HOME_DIR < 0
-    #define Y_MAX_PIN                      P1_25  // E1DET
+    #define Y_MAX_PIN                      P0_15//P1_25  // E1DET
   #else
-    #define Y_MIN_PIN                      P1_25  // E1DET
+    #define Y_MIN_PIN                      P0_15//P1_25  // E1DET
   #endif
 #else
   #define Y_STOP_PIN                       P1_28  // Y-STOP
