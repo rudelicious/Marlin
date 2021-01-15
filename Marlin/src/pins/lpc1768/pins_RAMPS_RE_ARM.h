@@ -45,7 +45,7 @@
 // Servos
 //
 #define SERVO0_PIN                         P1_20  // (11)
-#define SERVO1_PIN                         P1_21  // ( 6) also on J5-1
+#define SERVO1_PIN                         P1_21  //@_ Used for NeoPixel ( 6) also on J5-1
 #define SERVO2_PIN                         P1_19  // ( 5)
 #define SERVO3_PIN                         P1_18  // ( 4) 5V output
 
@@ -198,7 +198,6 @@
 #endif
 #ifndef RAMPS_D8_PIN
   //@_ D8 pin changed to P1.17 on RE-ARM board; used w/Little Driver board to control heatbed temperature
-  //@_ P2_07 is used as E0_AUTO_FAN_PIN (Configuration_adv.h)
   #define RAMPS_D8_PIN   P1_17//P2_07 // (8)
 #endif
 #ifndef RAMPS_D9_PIN
