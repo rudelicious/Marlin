@@ -2479,7 +2479,7 @@
 #define NEOPIXEL_LED 
 #if ENABLED(NEOPIXEL_LED)
   #define NEOPIXEL_TYPE   NEO_GRB // NEO_GRBW / NEO_GRB - four/three channel driver type (defined in Adafruit_NeoPixel.h)
-  #define NEOPIXEL_PIN    P1_21//SERVO1_PIN //P1_31//P1_22 //P2_06      // LED driving pin
+  #define NEOPIXEL_PIN    P1_21//SERVO1_PIN     // LED driving pin
   //#define NEOPIXEL2_TYPE NEOPIXEL_TYPE
   //#define NEOPIXEL2_PIN    5
   #define NEOPIXEL_PIXELS 1       // Number of LEDs in the strip. (Longest strip when NEOPIXEL2_SEPARATE is disabled.)
