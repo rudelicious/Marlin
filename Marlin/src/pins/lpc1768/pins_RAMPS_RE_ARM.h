@@ -198,6 +198,7 @@
 #endif
 #ifndef RAMPS_D8_PIN
   //@_ D8 pin changed to P1.17 on RE-ARM board; used w/Little Driver board to control heatbed temperature
+  //@_ P2_07 Reassigned to CONTROLLER_FAN_PIN (Configuration_adv.h)
   #define RAMPS_D8_PIN   P1_17//P2_07 // (8)
 #endif
 #ifndef RAMPS_D9_PIN
