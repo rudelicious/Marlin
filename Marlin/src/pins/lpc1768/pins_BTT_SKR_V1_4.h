@@ -38,7 +38,7 @@
 
 //
 // Servos
-//
+//_@ Reassign P2_00 to CONTROLLER_FAN_PIN (Configuration_adv.h)
 #define SERVO0_PIN                         P2_00
 
 //
