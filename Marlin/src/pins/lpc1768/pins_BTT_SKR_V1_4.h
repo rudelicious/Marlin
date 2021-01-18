@@ -38,7 +38,7 @@
 
 //
 // Servos
-//_@ Reassign P2_00 to CONTROLLER_FAN_PIN (Configuration_adv.h)
+//_@ Used by Z_MIN_PROBE_PIN (Configuration.h)
 #define SERVO0_PIN                         P2_00
 
 //
@@ -94,7 +94,7 @@
 // Z Probe (when not Z_MIN_PIN)
 //
 #ifndef Z_MIN_PROBE_PIN
-  #define Z_MIN_PROBE_PIN                  P0_10
+  #define Z_MIN_PROBE_PIN                 P0_10// P2_00//_@ P2_00 originally assigned to SERVO0_PIN //
 #endif
 
 //

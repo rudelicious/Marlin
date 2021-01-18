@@ -86,7 +86,7 @@
   #define FAN_PIN                          P2_03
 #endif
 #ifndef HEATER_BED_PIN
-  #define HEATER_BED_PIN                   P2_05
+  #define HEATER_BED_PIN                   P0_10//_@ Originally assigned to PROBE_PIN on SKR_14 (PROBE_PIN reassigned to SERVO0_PIN) //P2_05
 #endif
 
 //
