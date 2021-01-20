@@ -861,7 +861,7 @@
  *      - normally-closed switches to GND and D32.
  *      - normally-open switches to 5V and D32.
  */
-#define Z_MIN_PROBE_PIN SERVO0_PIN//@_ Servo connector on SKR_14 (Original PROBE_PIN P0_10 reassigned to E0_AUTO_FAN_PIN) // Pin 32 is the RAMPS default
+#define Z_MIN_PROBE_PIN SERVO0_PIN//@_ Servo connector on SKR_14  // Pin 32 is the RAMPS default
 
 /**
  * Probe Type
