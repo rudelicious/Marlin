@@ -135,13 +135,8 @@
 #define CUSTOM_MACHINE_NAME "Kossel Mini"
 
 // Printer's unique ID, used by some programs to differentiate between machines.
-<<<<<<< HEAD
-// Choose your own or use a service like http://www.uuidgenerator.net/version4
-#define MACHINE_UUID "f3575272-f0de-11e7-8c3f-9a214cf093ae"
-=======
 // Choose your own or use a service like https://www.uuidgenerator.net/version4
 //#define MACHINE_UUID "00000000-0000-0000-0000-000000000000"
->>>>>>> d94278359cce8f19c81cb2ac89cfe7f0b7aac858
 
 // @section extruder
 
@@ -497,7 +492,6 @@
   //#define PID_AUTOTUNE_MENU     // Add PID auto-tuning to the "Advanced Settings" menu. (~250 bytes of PROGMEM)
   //#define PID_PARAMS_PER_HOTEND // Uses separate PID parameters for each extruder (useful for mismatched extruders)
                                   // Set/get with gcode: M301 E[extruder number, 0-2]
-<<<<<<< HEAD
   #define PID_FUNCTIONAL_RANGE 10 // If the temperature difference between the target temperature and the actual temperature
                                   // is more than PID_FUNCTIONAL_RANGE then the PID will be shut off and the heater will be set to min/max.
 
@@ -520,8 +514,6 @@
   
   //@_ Save to EEPROM:
   // M500 
-=======
->>>>>>> d94278359cce8f19c81cb2ac89cfe7f0b7aac858
 
   #if ENABLED(PID_PARAMS_PER_HOTEND)
     // Specify between 1 and HOTENDS values per array.
@@ -585,7 +577,6 @@
   #define DEFAULT_bedKi 0.39
   #define DEFAULT_bedKd 461.95
 
-<<<<<<< HEAD
   //@_ Set PIDs:
   // M304 P16.47 I0.39  D461.95
 
@@ -593,15 +584,6 @@
   // M500 
 
 
-=======
-  // 120V 250W silicone heater into 4mm borosilicate (MendelMax 1.5+)
-  // from FOPDT model - kp=.39 Tp=405 Tdead=66, Tc set to 79.2, aggressive factor of .15 (vs .1, 1, 10)
-  #define DEFAULT_bedKp 10.00
-  #define DEFAULT_bedKi .023
-  #define DEFAULT_bedKd 305.4
-
-  // FIND YOUR OWN: "M303 E-1 C8 S90" to run autotune on the bed at 90 degreesC for 8 cycles.
->>>>>>> d94278359cce8f19c81cb2ac89cfe7f0b7aac858
 #endif // PIDTEMPBED
 
 #if EITHER(PIDTEMP, PIDTEMPBED)
@@ -1138,13 +1120,8 @@
 // with NOZZLE_AS_PROBE this can be negative for a wider probing area.
 #define PROBING_MARGIN 10
 
-<<<<<<< HEAD
-// X and Y axis travel speed (mm/m) between probes
-#define XY_PROBE_SPEED 4000
-=======
 // X and Y axis travel speed (mm/min) between probes
 #define XY_PROBE_SPEED (133*60)
->>>>>>> d94278359cce8f19c81cb2ac89cfe7f0b7aac858
 
 // Feedrate (mm/min) for the first approach when double-probing (MULTIPLE_PROBING == 2)
 #define Z_PROBE_SPEED_FAST HOMING_FEEDRATE_Z
@@ -1544,14 +1521,9 @@
   #define Z_SAFE_HOMING_Y_POINT Y_CENTER  // Y point for Z homing
 #endif
 
-<<<<<<< HEAD
-// Delta only homes to Z
-#define HOMING_FEEDRATE_Z  (200*60)
-=======
 // Homing speeds (mm/min)
 #define HOMING_FEEDRATE_XY (50*60)
 #define HOMING_FEEDRATE_Z  (4*60)
->>>>>>> d94278359cce8f19c81cb2ac89cfe7f0b7aac858
 
 // Validate that endstops are triggered on homing moves
 #define VALIDATE_HOMING_ENDSTOPS
@@ -1683,14 +1655,11 @@
 
 #if ENABLED(NOZZLE_PARK_FEATURE)
   // Specify a park position as { X, Y, Z_raise }
-<<<<<<< HEAD
   #define NOZZLE_PARK_POINT { (X_MIN_POS + 10), 0, 20 }
-=======
   #define NOZZLE_PARK_POINT { (X_MIN_POS + 10), (Y_MAX_POS - 10), 20 }
   //#define NOZZLE_PARK_X_ONLY          // X move only is required to park
   //#define NOZZLE_PARK_Y_ONLY          // Y move only is required to park
   #define NOZZLE_PARK_Z_RAISE_MIN   2   // (mm) Always raise Z by at least this distance
->>>>>>> d94278359cce8f19c81cb2ac89cfe7f0b7aac858
   #define NOZZLE_PARK_XY_FEEDRATE 100   // (mm/s) X and Y axes feedrate (also used for delta Z axis)
   #define NOZZLE_PARK_Z_FEEDRATE    5   // (mm/s) Z axis feedrate (not used for delta printers)
 #endif
@@ -2517,32 +2486,18 @@
   //#define RGB_LED_W_PIN -1
 #endif
 
-<<<<<<< HEAD
-// Support for Adafruit Neopixel LED driver
-// #define NEOPIXEL_LED 
-=======
 // Support for Adafruit NeoPixel LED driver
 //#define NEOPIXEL_LED
->>>>>>> d94278359cce8f19c81cb2ac89cfe7f0b7aac858
 #if ENABLED(NEOPIXEL_LED)
   #define NEOPIXEL_TYPE   NEO_GRB // NEO_GRBW / NEO_GRB - four/three channel driver type (defined in Adafruit_NeoPixel.h)
   #define NEOPIXEL_PIN     P1_22//4       // LED driving pin
   //#define NEOPIXEL2_TYPE NEOPIXEL_TYPE
   //#define NEOPIXEL2_PIN    5
-<<<<<<< HEAD
   #define NEOPIXEL_PIXELS 12       // Number of LEDs in the strip, larger of 2 strips if 2 neopixel strips are used
-=======
-  #define NEOPIXEL_PIXELS 30       // Number of LEDs in the strip. (Longest strip when NEOPIXEL2_SEPARATE is disabled.)
->>>>>>> d94278359cce8f19c81cb2ac89cfe7f0b7aac858
   #define NEOPIXEL_IS_SEQUENTIAL   // Sequential display for temperature change - LED by LED. Disable to change all LEDs at once.
   #define NEOPIXEL_BRIGHTNESS 63  // Initial brightness (0-255)
   #define NEOPIXEL_STARTUP_TEST  // Cycle through colors at startup
 
-<<<<<<< HEAD
-  // Use a single Neopixel LED for static (background) lighting
-  #define NEOPIXEL_BKGD_LED_INDEX  0               // Index of the LED to use
-  #define NEOPIXEL_BKGD_COLOR { 63, 0, 0, 0 } // R, G, B, W
-=======
   // Support for second Adafruit NeoPixel LED driver controlled with M150 S1 ...
   //#define NEOPIXEL2_SEPARATE
   #if ENABLED(NEOPIXEL2_SEPARATE)
@@ -2556,7 +2511,6 @@
   // Use a single NeoPixel LED for static (background) lighting
   //#define NEOPIXEL_BKGD_LED_INDEX  0               // Index of the LED to use
   //#define NEOPIXEL_BKGD_COLOR { 255, 255, 255, 0 } // R, G, B, W
->>>>>>> d94278359cce8f19c81cb2ac89cfe7f0b7aac858
 #endif
 
 /**
