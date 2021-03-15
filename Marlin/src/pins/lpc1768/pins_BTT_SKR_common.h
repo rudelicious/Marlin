@@ -89,6 +89,8 @@
   #define HEATER_BED_PIN                   P2_05
 #endif
 
+#define COOLANT_FLOOD_PIN                  FAN1_PIN//-1   //_ Use FAN1_PIN for Air Assist 
+
 //
 // LCD / Controller
 //
