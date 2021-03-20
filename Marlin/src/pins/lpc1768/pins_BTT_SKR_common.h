@@ -83,14 +83,14 @@
   #endif
 #endif
 #ifndef FAN_PIN
-  #define FAN_PIN                          P2_03
+  #define FAN_PIN                          NEOPIXEL_PIN//P2_03  //@_LASER
 #endif
 #ifndef HEATER_BED_PIN
   #define HEATER_BED_PIN                   P2_05
 #endif
 
-//_@
-#define COOLANT_FLOOD_PIN                  NEOPIXEL_PIN//-1   //_ Use PIN for Air Assist 
+//_@LASER
+#define COOLANT_FLOOD_PIN                  -1   //_ Air Assist (see: pins_BTT_SKR_common.h) 
 
 //
 // LCD / Controller

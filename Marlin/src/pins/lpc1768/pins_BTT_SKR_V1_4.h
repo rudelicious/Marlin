@@ -418,7 +418,7 @@
 // NeoPixel LED
 //
 #ifndef NEOPIXEL_PIN
-  #define NEOPIXEL_PIN                     P1_24
+  #define NEOPIXEL_PIN                     P1_24  //_@LASER Assigned to COOLANT_FLOOD_PIN (see: pins_BTT_SKR_common.h)
 #endif
 
 /**
