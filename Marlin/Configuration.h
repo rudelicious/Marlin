@@ -428,7 +428,7 @@
 #define TEMP_SENSOR_CHAMBER 0
 
 // Dummy thermistor constant temperature readings, for use with 998 and 999
-#define DUMMY_THERMISTOR_998_VALUE -1
+#define DUMMY_THERMISTOR_998_VALUE -1 //_@LASER
 #define DUMMY_THERMISTOR_999_VALUE 100
 
 // Resistor values when using a MAX31865 (sensor -5)
