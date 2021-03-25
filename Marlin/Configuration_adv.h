@@ -1924,7 +1924,7 @@
 #endif
 
 // Add M575 G-code to change the baud rate
-//#define BAUD_RATE_GCODE
+// #define BAUD_RATE_GCODE  //@_ Not supported yet on LPC176x
 
 #if ENABLED(SDSUPPORT)
   // Enable this option to collect and display the maximum
